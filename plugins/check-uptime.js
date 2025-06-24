@@ -17,7 +17,7 @@ async (conn, mek, m, { from, reply, args }) => {
         const uptime = runtime(process.uptime());
         const seconds = Math.floor(process.uptime());
         const startTime = new Date(Date.now() - seconds * 1000);
-        const version = pkg.version || "1.0.0";
+        const version = pkg.version || "2.0.0";
 
         const styles = [
 `╭───『 *UPTIME* 』───╮
