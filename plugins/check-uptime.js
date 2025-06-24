@@ -44,7 +44,6 @@ async (conn, mek, m, { from, reply, args }) => {
 ││ • ᴛɪᴍᴇ: ${uptime}
 ││ • sᴇᴄᴏɴᴅs: ${seconds}
 ││ • sᴛᴀʀᴛᴇᴅ: ${startTime.toLocaleString()}
-││ • ᴠᴇʀsɪᴏɴ: ${version}
 │╰┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┈⊷
 ╰╼━━━━━━━━━━━━━━━━━╾╯
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`,
@@ -79,7 +78,6 @@ async (conn, mek, m, { from, reply, args }) => {
 ┃╏◈ sᴇᴄᴏɴᴅs: ${seconds}
 ┃╏◈ sᴛᴀʀᴛ ᴛɪᴍᴇs: ${startTime.toLocaleString()}
 ┃╏◈ sᴛᴀʙɪʟɪᴛʏ: 100%
-┃╏◈ ᴠᴇʀsɪᴏɴ: ${ᴠᴇʀsɪᴏɴ}
 ┃╰┅┅┅┅┅┅┅┅┅┉┅┅┅┈⊷
 ╰━━━━━━━━━━━━━━━━━━╯
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`
