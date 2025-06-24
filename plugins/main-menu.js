@@ -15,11 +15,12 @@ function toSmallCaps(str) {
 
 cmd({
   pattern: "menu",
-  alias: ["👑", "xtreme"],
+  alias: ["👑"],
   use: '.menu',
   desc: "Show all bot commands",
   category: "menu",
   react: "📜",
+  audio: { url: 'https://files.catbox.moe/6ifekx.mp3' },
   filename: __filename
 },
 async (haiko, mek, m, { from, reply }) => {
@@ -365,11 +366,10 @@ async (haiko, mek, m, { from, reply }) => {
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ*`;
     
 await haiko.sendMessage(from, {
-      image: { url:`https://files.catbox.moe/nn90ag.jpg`},
+      image: { url:`https://files.catbox.moe/22fhoo.jpg`},
       caption: haikomenu,
       contextInfo: {
         mentionedJid: [m.sender],
-        audio: { url: 'https://files.catbox.moe/6ifekx.mp3' },
         forwardingScore: 999,
         isForwarded: true,
         forwardedNewsletterMessageInfo: {
