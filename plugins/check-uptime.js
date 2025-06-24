@@ -21,12 +21,12 @@ async (conn, mek, m, { from, reply, args }) => {
 
         const styles = [
 `╭──『 *UPTIME* 』─╮
-│ ╭╌┈┈┈┈┈┈┈┈╌╌┄
+│ ╭╌┈┈┈┈┈┈╌┄
 │ ┆⏱️ ${uptime}
 │ ┆🧭 ${seconds} seconds
 │ ┆🚀 Started: ${startTime.toLocaleString()}
-│ ╰┄┄┄┄┄┄┄┄┄┄┄┄
-╰──────────────╯
+│ ╰┄┄┄┄┄┄┄┄┄
+╰────────────╯
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`,
 
 `╭╼═⧼𝗨𝗣𝗧𝗜𝗠𝗘 𝗦𝗧𝗔𝗧𝗨𝗦⧽═╾╮
