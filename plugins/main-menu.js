@@ -20,7 +20,7 @@ cmd({
   desc: "Show all bot commands",
   category: "menu",
   react: "🔮",
-  audio: { url: 'https://files.catbox.moe/6ifekx.mp3' },
+  audio: { mp3: 'https://files.catbox.moe/6ifekx.mp3' },
   filename: __filename
 },
 async (haiko, mek, m, { from, reply }) => {
@@ -339,7 +339,7 @@ async (haiko, mek, m, { from, reply }) => {
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`;
     
 await haiko.sendMessage(from, {
-      image: { url:`https://files.catbox.moe/22fhoo.jpg`},
+      image: { url:`https://files.catbox.moe/3asym0.jpg`},
       caption: haikomenu,
       contextInfo: {
         mentionedJid: [m.sender],
