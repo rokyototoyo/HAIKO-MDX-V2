@@ -362,8 +362,6 @@ await haiko.sendMessage(from, {
                 mentionedJid: [m.sender],
                 forwardingScore: 999,
                 isForwarded: true
-            }
-        }, { quoted: mek });
 
     
   } catch (e) {
