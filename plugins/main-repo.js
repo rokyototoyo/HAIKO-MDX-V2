@@ -27,7 +27,7 @@ async (conn, mek, m, { from, reply }) => {
 ┇┃♢ *ʀᴇᴘᴏsɪᴛᴏʀʏ*: ${repoData.name}
 ┇┃♢ *ᴏᴡɴᴇʀ*: ${repoData.owner.login}
 ┇┃♢ *sᴛᴀʀs*: ${repoData.stargazers_count}
-┇┃♢⑂ *ғᴏʀᴋs*: ${repoData.forks_count}
+┇┃♢ *ғᴏʀᴋs*: ${repoData.forks_count}
 ┇┃♢ *ᴜʀʟ*: ${repoData.html_url}
 ┇┃
 ┇┃♢📝 *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ*:
