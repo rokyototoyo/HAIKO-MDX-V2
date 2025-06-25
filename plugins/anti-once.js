@@ -5,6 +5,7 @@ cmd({
   alias: ["waouh", "ohh", "oh", "🤤", "nice", "ok"],
   desc: "Owner Only - retrieve quoted message back to user",
   category: "owner",
+  react: "🤲🏻"
   filename: __filename
 }, async (client, message, match, { from, isCreator }) => {
   try {
@@ -14,7 +15,7 @@ cmd({
 
     if (!match.quoted) {
       return await client.sendMessage(from, {
-        text: "*🌟 Please reply to a view once message!*"
+        text: "*🔮 ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴠɪᴇᴡ ᴏɴᴄᴇ ᴍᴇssᴀɢᴇ!*"
       }, { quoted: message });
     }
 
