@@ -353,16 +353,6 @@ await haiko.sendMessage(from, {
       }
     }, { quoted: mek });
 
-        // Send audio
-        await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/uzvvj1.mp3' },
-            mimetype: 'audio/mp4',
-            ptt: true,
-            contextInfo: { 
-                mentionedJid: [m.sender],
-                forwardingScore: 999,
-                isForwarded: true
-
     
   } catch (e) {
     console.error(e);
