@@ -1,11 +1,9 @@
-const fs = require("fs");
-const config = require("../config");
-const { cmd, commands } = require("../command");
-const path = require('path');
-const axios = require("axios");
+const { cmd } = require('../command');
+const axios = require('axios');
 
-case 'getpp': {
-  if (!Owner) return m.reply(mess.owner)
+cmd({
+    pattern: "getpp",
+     if (!Owner) return m.reply(mess.owner)
     let target;
 
     // Jika ada mention
@@ -21,7 +19,7 @@ case 'getpp': {
         const nomor = q.replace(/[^0-9]/g, '');
         target = nomor + '@s.whatsapp.net';
     } else {
-        return m.reply(`*ᴇxᴀᴍᴘʟᴇ : .ɢᴇᴛᴘᴘ @5222XXXXX* 〽️`);
+        return m.reply(`*ᴇxᴀᴍᴘʟᴇ : .ɢᴇᴛᴘᴘ @1849xxxx* 〽️`);
     }
 
     try {
