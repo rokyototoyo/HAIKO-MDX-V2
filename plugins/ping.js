@@ -32,9 +32,9 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
         const end = new Date().getTime();
         const responseTime = (end - start) / 1000;
 
-        const text = `╭━━〔 *🛸 SPEED2 TEST* 〕━━╮
+        const text = `╭━━〔 *🛸 SPEED  TEST* 〕━━╮
 ┃ 🤖 *BOT* : *HAIKO MDX V2*
-┃ ⏳ *PING* : *${ping}MS*
+┃ ⏳ *PING* : *${responseTime.toFixed(2)}MS ${reactionEmoji}*
 ╰━━━━━━━━━━━━━━━━━━━━╯
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx* 💙`;
 
@@ -75,7 +75,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const ping = endTime - startTime
         await conn.sendMessage(from, { text: `╭━━━━⪻•𝐏𝐈𝐍𝐆 𝐓𝐄𝐒𝐓•⪼━━━━╮
 ┃📡𝐁𝐎𝐓: *𝐇𝐀𝐈𝐊𝐎 𝐌𝐃𝐗 𝐕𝟐*
-┃🌟𝐏𝐈𝐍𝐆: *${responseTime.toFixed(2)}MS ${reactionEmoji}*
+┃🌟𝐏𝐈𝐍𝐆: *${ping}MS*
 ╰━━━━━━⦉𝐗𝐓𝐑𝐄𝐌𝐄⦊━━━━━━╯
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx* 💙` }, { quoted: message })
     } catch (e) {
