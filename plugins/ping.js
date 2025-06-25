@@ -35,7 +35,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
         const text = `╭━━〔 *🛸 SPEED  TEST* 〕━━╮
 ┃ 🤖 *BOT* : *HAIKO MDX V2*
 ┃ ⏳ *PING* : *${responseTime.toFixed(2)}MS ${reactionEmoji}*
-╰━━━━━━━━━━━━━━━━━━━━╯
+╰━━━━━━━━━━━━━━━━━━╯
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx* 💙`;
 
         await conn.sendMessage(from, {
@@ -61,7 +61,7 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
 // ping2 
 
 cmd({
-    pattern: "ping2",
+    pattern: "ping3",
     desc: "Check bot's response time.",
     category: "main",
     react: "📡",
