@@ -3,7 +3,7 @@ const { sleep } = require("../lib/functions");
 
 cmd({  
     pattern: "restart",  
-    desc: "Restart HAIKO-MDX-V2",  
+    desc: "*ʀᴇsᴛᴀʀᴛ ʜᴀɪᴋᴏ ᴍᴅx*",  
     category: "owner",  
     filename: __filename  
 },  
@@ -14,7 +14,7 @@ async (conn, mek, m, { reply, isCreator }) => {
         }  
 
         const { exec } = require("child_process");  
-        reply("HAIKO-MDX-V2 RESTARTING...");  
+        reply("*ʜᴀɪᴋᴏ ᴍᴅx ʀᴇsᴛᴀʀᴛɪɴɢ...*");  
         await sleep(1500);  
         exec("pm2 restart all");  
     } catch (e) {  
