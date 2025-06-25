@@ -6,15 +6,15 @@ cmd({
     alias: ["speed","pong"],use: '.ping',
     desc: "Check bot's response time.",
     category: "main",
-    react: "🍁",
+    react: "📌",
     filename: __filename
 },
 async (conn, mek, m, { from, quoted, sender, reply }) => {
     try {
         const start = new Date().getTime();
 
-        const reactionEmojis = ['🔥', '⚡', '⏰', '💨', '🎯', '🎉', '👿', '💥', '🕐', '🤖'];
-        const textEmojis = ['⏰', '🏆', '🛸', '🚀', '🎶', '🪀', '💞', '🔱', '🛡️', '❣️'];
+        const reactionEmojis = ['❄️'];
+        const textEmojis = ['🚀'];
 
         const reactionEmoji = reactionEmojis[Math.floor(Math.random() * reactionEmojis.length)];
         let textEmoji = textEmojis[Math.floor(Math.random() * textEmojis.length)];
@@ -32,11 +32,11 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
         const end = new Date().getTime();
         const responseTime = (end - start) / 1000;
 
-        const text = `╭━━〔 *🛸 SPEED  TEST* 〕━━╮
+        const text = `╭━━〔 🛸 𝗣𝗜𝗡𝗚 𝗧𝗘𝗦𝗧 〕━━╮
 ┃ 🤖 *BOT* : *HAIKO MDX V2*
 ┃ ⏳ *PING* : *${responseTime.toFixed(2)}MS ${reactionEmoji}*
-╰━━━━━━━━━━━━━━━━━━╯
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx* 💙`;
+╰━━━━━━━━━━━━━━━━━━━╯
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*`;
 
         await conn.sendMessage(from, {
             text,
@@ -73,12 +73,12 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         const message = await conn.sendMessage(from, { text: '*PINGING...⏳*' })
         const endTime = Date.now()
         const ping = endTime - startTime
-        await conn.sendMessage(from, { text: `╭━━━⪨𝗛𝗔𝗜𝗞𝗢-𝗠𝗗𝗫⪩━━━╮
+        await conn.sendMessage(from, { text: `╭━━━⪨𝗦𝗣𝗘𝗘𝗗 𝗧𝗘𝗦𝗧⪩━━━╮
 ┃╭╼━━━━━━━━━━━┈⊷
 ┃┃♦ 𝗣𝗜𝗡𝗚𝟮: *${ping}MS*
-┃┃♦︎ 𝗗𝗘𝗩: 𝗫𝗧𝗥𝗘𝗠𝗘
+┃┃♦ 𝗗𝗘𝗩: 𝗫𝗧𝗥𝗘𝗠𝗘
 ┃╰╼━━━━━━━━━━━┈⊷
-╰╼══════════════╾╯
+╰╼━━━━━━━━━━━━━━━╾╯
 > *𝑃𝑂𝑊𝐸𝑅𝐸𝐷 𝐵𝑌 𝑋𝑇𝑅𝐸𝑀𝐸*` }, { quoted: message })
     } catch (e) {
         console.log(e)
