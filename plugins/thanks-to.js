@@ -2,7 +2,7 @@ const { cmd } = require('../command');
 const config = require('../config');
 
 cmd({
-    pattern: "haiko",
+    pattern: "ping2",
     alias: ["thanksto"],
     desc: "thanks to dev for helping",
     category: "main",
@@ -13,10 +13,8 @@ async (conn, mek, m, { from }) => {
     try {
         const message =`╭━━━⪨𝗛𝗔𝗜𝗞𝗢-𝗠𝗗𝗫⪩━━━╮
 ┃╭╼━━━━━━━━━━━┈⊷
-┃┃👨‍💻 𝗗𝗘𝗩:𝗣𝗥𝗢𝗙-𝗫𝗧𝗥𝗘𝗠𝗘
-┃┃🪀 𝗡𝗨𝗠𝗕𝗘𝗥:+529633982655
-┃┃🛠️ 𝗕𝗡𝗔𝗠𝗘:𝗛𝗔𝗜𝗞𝗢 𝗠𝗗𝗫
-┃┃🙋‍♂️ 𝗛𝗜: @${m.sender.split("@")[0]}
+┃┃♦ 𝗣𝗜𝗡𝗚𝟮: *${ping}MS*
+┃┃♦︎ 𝗗𝗘𝗩: 𝗫𝗧𝗥𝗘𝗠𝗘
 ┃╰╼━━━━━━━━━━━┈⊷
 ╰╼══════════════╾╯
 > *𝑃𝑂𝑊𝐸𝑅𝐸𝐷 𝐵𝑌 𝑋𝑇𝑅𝐸𝑀𝐸*`;
