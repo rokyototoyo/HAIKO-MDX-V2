@@ -20,13 +20,13 @@ async (conn, mek, m, { from, reply, args }) => {
         const version = pkg.version || "1.0.0";
 
         const styles = [
-`╭──『 *UPTIME* 』─╮
-│ ╭╌┈┈┈┈┈┈╌┄
+`╭────『 *UPTIME* 』───╮
+│ ╭╌┈┈┈┈┈┄┄┈╌┈⊷
 │ ┆⏱️ ${uptime}
 │ ┆🧭 ${seconds} seconds
 │ ┆🚀 Started: ${startTime.toLocaleString()}
-│ ╰┄┄┄┄┄┄┄┄┄
-╰────────────╯
+│ ╰┄┄┄┄┄┄┄┄┄┄┈ ┈⊷
+╰────────────────╯
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`,
 
 `╭╼═⧼𝗨𝗣𝗧𝗜𝗠𝗘 𝗦𝗧𝗔𝗧𝗨𝗦⧽═╾╮
