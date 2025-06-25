@@ -60,19 +60,6 @@ async (conn, mek, m, { from, quoted, sender, reply }) => {
 
 // ping2 
 
-await conn.sendMessage(from, {
-            image: { url: 'https://files.catbox.moe/2vosmn.jpg' },
-            caption: message,
-            contextInfo: {
-                mentionedJid: [m.sender],
-                forwardingScore: 1000,
-                isForwarded: true,
-                forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363398101781980@newsletter', // remplace avec ton vrai newsletterJid si besoin
-                    newsletterName: '𝐏𝐑𝐎𝐅-𝐗𝐓𝐑𝐄𝐌𝐄',
-                    serverMessageId: 143
-                };
-
 cmd({
     pattern: "ping2",
     desc: "Check bot's response time.",
