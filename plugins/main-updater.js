@@ -9,14 +9,14 @@ cmd({
     pattern: "update",
     alias: ["upgrade", "sync"],
     react: '🆕',
-    desc: "*UPDATE THE BOT TO THE LATEST VERSION.*",
+    desc: "*ᴜᴘᴅᴀᴛᴇ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴛʜᴇ ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ.*",
     category: "misc",
     filename: __filename
-}, async (client, message, args,haiko, { reply, isOwner }) => {
-    if (!isOwner) return reply("This command is only for the bot owner.");
+}, async (client, message, args, { reply, isOwner }) => {
+    if (!isOwner) return reply("*ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪs ᴏɴʟʏ ғᴏʀ ᴛʜᴇ ʙᴏᴛ ᴏᴡɴᴇʀ*");
 
     try {
-        await reply("*🔍 CHECKING FOR UPDATES...*");
+        await reply("*🔍 ᴄʜᴇᴄᴋɪɴɢ ғᴏʀ ᴜᴘᴅᴀᴛᴇs...*");
 
         // Fetch the latest commit hash from GitHub
         const { data: commitData } = await axios.get("https://api.github.com/repos/PROFESSEURMDX/HAIKO-MDX-V2/commits/main");
@@ -26,10 +26,10 @@ cmd({
         const currentHash = await getCommitHash();
 
         if (latestCommitHash === currentHash) {
-            return reply("*✅ YOUR HAIKO-MDX-V2 BOT IS ALREADY UP-TO-DATE !*");
+            return reply("*✅ ʏᴏᴜʀ ʜᴀɪᴋᴏ-ᴍᴅx ʙᴏᴛ ɪs ᴀʟʀᴇᴀᴅʏ ᴜᴘ-ᴛᴏ-ᴅᴀᴛᴇ !*");
         }
 
-        await reply("*🚀 UPDATING HAIKO-MDX-V2 BOT...*");
+        await reply("*🚀 ᴜᴘᴅᴀᴛɪɴɢ ʜᴀɪᴋᴏ-ᴍᴅx-ᴠ2 ʙᴏᴛ...*");
 
         // Download the latest code
         const zipPath = path.join(__dirname, "latest.zip");
@@ -37,13 +37,13 @@ cmd({
         fs.writeFileSync(zipPath, zipData);
 
         // Extract ZIP file
-        await reply("*📦 EXTRACTING THE LATEST CODE...*");
+        await reply("*📦 ᴇxᴛʀᴀᴄᴛɪɴɢ ᴛʜᴇ ʟᴀᴛᴇsᴛ ᴄᴏᴅᴇ...*");
         const extractPath = path.join(__dirname, 'latest');
         const zip = new AdmZip(zipPath);
         zip.extractAllTo(extractPath, true);
 
         // Copy updated files, preserving config.js and app.json
-        await reply("*🔄 REPLACING FILES...*");
+        await reply("*🔄 ʀᴇᴘʟᴀᴄɪɴɢ ғɪʟᴇs...*");
         const sourcePath = path.join(extractPath, "HAIKO-MDX-V2-main");
         const destinationPath = path.join(__dirname, '..');
         copyFolderSync(sourcePath, destinationPath);
@@ -55,11 +55,11 @@ cmd({
         fs.unlinkSync(zipPath);
         fs.rmSync(extractPath, { recursive: true, force: true });
 
-        await reply("*✅ UPDATE COMPLETE! RESTARTING THE BOT...*");
+        await reply("*✅ ᴜᴘᴅᴀᴛᴇ ᴄᴏᴍᴘʟᴇᴛᴇ! ʀᴇsᴛᴀʀᴛɪɴɢ ᴛʜᴇ ʙᴏᴛ...*");
         process.exit(0);
     } catch (error) {
         console.error("Update error:", error);
-        return reply("❌ Update failed. Please try manually.");
+        return reply("*❌ ᴜᴘᴅᴀᴛᴇ ғᴀɪʟᴇᴅ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴍᴀɴᴜᴀʟʟʏ*");
     }
 });
 
@@ -87,3 +87,4 @@ function copyFolderSync(source, target) {
         }
     }
 }
+    
