@@ -12,11 +12,20 @@ cmd({
     desc: "*UPDATE THE BOT TO THE LATEST VERSION.*",
     category: "misc",
     filename: __filename
-}, async (client, message, args, { reply, isOwner }) => {
+}, async (client, message, args,haiko, { reply, isOwner }) => {
     if (!isOwner) return reply("This command is only for the bot owner.");
 
     try {
         await reply("*🔍 CHECKING FOR UPDATES...*");
+
+        let haikomenu =`🌐 *HAIKO MDX V2 Update Result*
+╭───────────────⭓
+│ 🤖 *BOT:* INCONNU XD V2
+│ 👑 *DEV:* INCONNU BOY
+│ 🛠️ *Update Status:* Success
+╰───────────────⭓
+
+✅ *Done! Use `.restart` to reload the bot.*`
 
         // Fetch the latest commit hash from GitHub
         const { data: commitData } = await axios.get("https://api.github.com/repos/PROFESSEURMDX/HAIKO-MDX-V2/commits/main");
