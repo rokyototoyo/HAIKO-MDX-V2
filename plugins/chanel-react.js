@@ -92,7 +92,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         console.error(e);
 
-        reply(`*❎ ᴇʀʀᴏʀ: ${e.message || "ғᴀɪʟᴇᴅ ᴛᴏ sᴇɴᴅ ʀᴇᴀᴄᴛɪᴏɴ*"}`);
+        reply(`❎ Error: ${e.message || "Failed to send reaction"}`);
 
     }
 
