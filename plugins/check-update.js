@@ -16,17 +16,16 @@ cmd({
   from, sender, pushname, reply
 }) => {
   try {
-    // Read local version data
     const localVersionPath = path.join(__dirname, '../data/version.json');
     let localVersion = 'Unknown';
     let changelog = 'No changelog available.';
+    
     if (fs.existsSync(localVersionPath)) {
       const localData = JSON.parse(fs.readFileSync(localVersionPath));
       localVersion = localData.version;
       changelog = localData.changelog;
     }
 
-    // Fetch latest version data from GitHub
     const rawVersionUrl = 'https://raw.githubusercontent.com/PROFESSEURMDX/HAIKO-MDX-V2/main/data/version.json';
     let latestVersion = 'Unknown';
     let latestChangelog = 'No changelog available.';
@@ -35,28 +34,28 @@ cmd({
       latestVersion = data.version;
       latestChangelog = data.changelog;
     } catch (error) {
-      console.error('Failed to fetch latest version:', error);
+      console.error('Failed to fetch latest version:', error.message);
     }
 
-    // Count total plugins
     const pluginPath = path.join(__dirname, '../plugins');
     const pluginCount = fs.readdirSync(pluginPath).filter(file => file.endsWith('.js')).length;
-
-    // Count total registered commands
     const totalCommands = commands.length;
 
-    // System info
     const uptime = runtime(process.uptime());
     const ramUsage = (process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2);
     const totalRam = (os.totalmem() / 1024 / 1024).toFixed(2);
     const hostName = os.hostname();
     const lastUpdate = fs.statSync(localVersionPath).mtime.toLocaleString();
 
-    // GitHub stats
     const githubRepo = 'https://github.com/PROFESSEURMDX/HAIKO-MDX-V2';
 
-    // Check update status
-    let updateMessage = `> *¢нє¢н υρ∂αтє ву `χтʀємє`*
+    // Dynamic update message
+    let updateMessage = `✅ Your HAIKO-MDX-V2 bot is up-to-date!`;
+    if (localVersion !== latestVersion) {
+      updateMessage = `🚀 *Your bot is outdated!*\n🔹 *Current Version:* ${localVersion}\n🔹 *Latest Version:* ${latestVersion}\n\nUse *.update* to update now.`;
+    }
+
+    const statusMessage = `> *ᴄʜᴇᴄᴋ ᴜᴘᴅᴀᴛᴇ ʙʏ xᴛʀᴇᴍᴇ*
 ╭╼━❍ *🚀᪳¢нє¢к υρ∂αтє* ❍
 ┃│🌟 *ʜɪ : ${pushname}!*
 ┃│📌 *ʙᴏᴛ ɴᴀᴍᴇ : ʜᴀɪᴋᴏ ᴍᴅx*
@@ -75,11 +74,11 @@ cmd({
 ┃│👤➳ *ᴅᴇᴠ : ᴘʀᴏғ xᴛʀᴇᴍᴇ*
 ┃│⭐➳ *ʀᴇᴘᴏ : ${githubRepo}*
 ┃│ *ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ғᴏʀᴋ,sᴛᴀʀ ᴛʜᴇ ʀᴇᴘᴏ!*
+┃│ *${updateMessage}*
 ┃╰────────────────
 ╰╼━━━━━━━━━━━━━━━━╾╯
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘғᴏғ xᴛʀᴇᴍᴇ*`;
 
-    // Send the status message with an image
     await conn.sendMessage(from, {
       image: { url: 'https://files.catbox.moe/cad2f0.jpg' },
       caption: statusMessage,
@@ -94,9 +93,9 @@ cmd({
         }
       }
     }, { quoted: mek });
+
   } catch (error) {
-    console.error('Error fetching version info:', error);
+    console.error('Error fetching version info:', error.message);
     reply('❌ An error occurred while checking the bot version.');
   }
 });
-                                     
