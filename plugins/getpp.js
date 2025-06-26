@@ -27,7 +27,7 @@ cmd({
       const ppUrl = await conn.profilePictureUrl(target, 'image').catch(() => null);
       if (!ppUrl) return m.reply('*La photo de profil est privée ou introuvable.*');
 
-      await conn.sendMessage(m.chat, {
+      await haiko.sendMessage(from, {
         image: { url: ppUrl },
         caption: `✅ Photo de profil de : ${target.split('@')[0]}`
       }, { quoted: m });
