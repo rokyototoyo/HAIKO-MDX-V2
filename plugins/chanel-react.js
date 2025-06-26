@@ -26,11 +26,11 @@ cmd({
 
     react: "🔤",
 
-    desc: "React to channel messages with stylized text",
+    desc: "*ʀᴇᴀᴄᴛ ᴛᴏ ᴄʜᴀɴɴᴇʟ ᴍᴇssᴀɢᴇs ᴡɪᴛʜ sᴛʏʟɪᴢᴇᴅ ᴛᴇxᴛ*",
 
     category: "owner",
 
-    use: '.chr <channel-link> <text>',
+    use: '*.chr <ᴄʜᴀɴɴᴇʟ-ʟɪɴᴋ> <ᴛᴇxᴛ>*',
 
     filename: __filename
 
@@ -52,7 +52,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         const inputText = textParts.join(' ').toLowerCase();
 
-        if (!inputText) return reply("Please provide text to convert");
+        if (!inputText) return reply("*ᴘʟᴇᴀsᴇ ᴘʀᴏᴠɪᴅᴇ ᴛᴇxᴛ ᴛᴏ ᴄᴏɴᴠᴇʀᴛ*");
 
         const emoji = inputText
 
@@ -72,25 +72,27 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 
         const messageId = link.split('/')[5];
 
-        if (!channelId || !messageId) return reply("Invalid link - missing IDs");
+        if (!channelId || !messageId) return reply("*ɪɴᴠᴀʟɪᴅ ʟɪɴᴋ - ᴍɪssɪɴɢ ɪᴅs*");
 
         const channelMeta = await conn.newsletterMetadata("invite", channelId);
 
         await conn.newsletterReactMessage(channelMeta.id, messageId, emoji);
 
-        return reply(`╭━〔 *HAIKO-MDX-V2* 〕━┈⊷
-┃▸ *Success!* Reaction sent
-┃▸ *Channel:* ${channelMeta.name}
-┃▸ *Reaction:* ${emoji}
+        return reply(`╭━『 *HAIKO-MDX-V2* 』
+┃│▸ *sᴜᴄᴄᴇss!* *ʀᴇᴀᴄᴛɪᴏɴ sᴇɴᴛ*
+┃│▸ *ᴄʜᴀɴɴᴇʟ:* *${channelMeta.name}*
+┃│▸ *ʀᴇᴀᴄᴛɪᴏɴ:* ${emoji}
+┃│▸ *ᴅᴇᴠ:* *`xᴛʀᴇᴍᴇ`*
+┃╰─────────────❍
 ╰────────────────┈⊷
 
-> *© ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ*`);
+> *©_ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ_*`);
 
     } catch (e) {
 
         console.error(e);
 
-        reply(`❎ Error: ${e.message || "Failed to send reaction"}`);
+        reply(`*❎ ᴇʀʀᴏʀ: ${e.message || "ғᴀɪʟᴇᴅ ᴛᴏ sᴇɴᴅ ʀᴇᴀᴄᴛɪᴏɴ*"}`);
 
     }
 
