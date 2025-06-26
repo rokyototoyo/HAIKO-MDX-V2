@@ -96,7 +96,7 @@ async (conn, mek, m, { from, reply, args }) => {
         }
 
         await conn.sendMessage(from, {
-            image: { url: 'https://files.catbox.moe/gt7zhk.jpg' },
+            image: { url: 'https://files.catbox.moe/eafhsi.jpg' },
             caption: selectedStyle,
             contextInfo: {
                 mentionedJid: [m.sender],
