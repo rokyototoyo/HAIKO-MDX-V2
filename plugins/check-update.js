@@ -56,20 +56,28 @@ cmd({
     const githubRepo = 'https://github.com/PROFESSEURMDX/HAIKO-MDX-V2';
 
     // Check update status
-    let updateMessage = `✅ Your HAIKO-MDX-V2 bot is up-to-date!`;
-    if (localVersion !== latestVersion) {
-      updateMessage = `🚀 Your HAIKO-MDX-V2 bot is outdated!
-🔹 *Current Version:* ${localVersion}
-🔹 *Latest Version:* ${latestVersion}
-
-Use *.update* to update.`;
-    }
-
-    const statusMessage = `🌟 *Good ${new Date().getHours() < 12 ? 'Morning' : 'Night'}, ${pushname}!* 🌟\n\n` +
-      `📌 *Bot Name:* HAIKO-MDX-V2\n🔖 *Current Version:* ${localVersion}\n📢 *Latest Version:* ${latestVersion}\n📂 *Total Plugins:* ${pluginCount}\n🔢 *Total Commands:* ${totalCommands}\n\n` +
-      `💾 *System Info:*\n⏳ *Uptime:* ${uptime}\n📟 *RAM Usage:* ${ramUsage}MB / ${totalRam}MB\n⚙️ *Host Name:* ${hostName}\n📅 *Last Update:* ${lastUpdate}\n\n` +
-      `📝 *Changelog:*\n${latestChangelog}\n\n` +
-      `⭐ *GitHub Repo:* ${githubRepo}\n👤 *Owner:* [PROFESSEURMDX](https://github.com/PROFESSEURMDX)\n\n${updateMessage}\n\n🚀 *Hey! Don't forget to fork & star the repo!*`;
+    let updateMessage = `> *¢нє¢н υρ∂αтє ву `χтʀємє`*
+╭╼━❍ *🚀᪳¢нє¢к υρ∂αтє* ❍
+┃│🌟 *ʜɪ : ${pushname}!*
+┃│📌 *ʙᴏᴛ ɴᴀᴍᴇ : ʜᴀɪᴋᴏ ᴍᴅx*
+┃│🔖 *ᴄᴜʀʀᴇɴᴛ ᴠᴇʀsɪᴏɴ : ${localVersion}*
+┃│📢 *ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ : ${latestVersion}*
+┃│📂 *ᴛᴏᴛᴀʟ ᴘʟᴜɢɪɴs : ${pluginCount}*
+┃│🔢 *ᴛᴏᴛᴀʟ ᴄᴏᴍᴍᴀɴᴅs: ${totalCommands}*
+┃│❍ *ᴍᴜʟᴛɪ ᴅᴇᴠɪᴄᴇ ᴡʜᴀᴛsᴀᴘᴘ ʙᴏᴛ*
+┃╰────────────────
+╰╼━━━━━━━━━━━━━━━━╾╯
+╭╼━❍ *💾᪳ѕуѕтєм ιηƒσ* ❍
+┃│⏳➳ *ᴜᴘᴛɪᴍᴇ : ${uptime}*
+┃│📟➳ *ʀᴀᴍ ᴜsᴀɢᴇ : ${ramUsage}ᴍʙ / ${totalRam}ᴍʙ*
+┃│⚙️➳ *ʜᴏsᴛ ɴᴀᴍᴇ : ${hostName}*
+┃│📅➳ *ʟᴀsᴛ ᴜᴘᴅᴀᴛᴇ : ${lastUpdate}*
+┃│👤➳ *ᴅᴇᴠ : ᴘʀᴏғ xᴛʀᴇᴍᴇ*
+┃│⭐➳ *ʀᴇᴘᴏ : ${githubRepo}*
+┃│ *ᴅᴏɴ'ᴛ ғᴏʀɢᴇᴛ ᴛᴏ ғᴏʀᴋ,sᴛᴀʀ ᴛʜᴇ ʀᴇᴘᴏ!*
+┃╰────────────────
+╰╼━━━━━━━━━━━━━━━━╾╯
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘғᴏғ xᴛʀᴇᴍᴇ*`;
 
     // Send the status message with an image
     await conn.sendMessage(from, {
