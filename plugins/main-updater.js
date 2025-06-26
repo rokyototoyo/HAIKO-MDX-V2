@@ -18,16 +18,6 @@ cmd({
     try {
         await reply("*🔍 CHECKING FOR UPDATES...*");
 
-        let haikomenu =`🌐 *HAIKO MDX V2 Update Result*
-╭───────────────⭓
-│ 🤖 *BOT:* INCONNU XD V2
-│ 👑 *DEV:* INCONNU BOY
-│ 🛠️ *Update Status:* Success
-╰───────────────⭓
-
-✅ *Done! Use `.restart` to reload the bot.*`;
-        haiko.sendMessage(from, { image: { url: `https://files.catbox.moe/nfanej.jpg` }, caption: haikomenu })
-
         // Fetch the latest commit hash from GitHub
         const { data: commitData } = await axios.get("https://api.github.com/repos/PROFESSEURMDX/HAIKO-MDX-V2/commits/main");
         const latestCommitHash = commitData.sha;
