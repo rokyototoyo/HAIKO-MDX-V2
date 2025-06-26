@@ -337,7 +337,7 @@ async (haiko, mek, m, { from, reply }) => {
 ┃       *𝚆𝙰 𝙱𝙾𝚃 𝟸𝟶𝟸𝟻-𝟸𝟶𝟸𝟼*
 ╰━━━━━━━━━━━━━━━━━┈⊷
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`;
-    haiko.sendMessage(conn.user.id, { audio: { url: `https://files.catbox.moe/6ifekx.mp3` }, caption: haikomenu })
+    haiko.sendMessage(from, { audio: { url: `https://files.catbox.moe/6ifekx.mp3` }, caption: haikomenu })
     
 await haiko.sendMessage(from, {
       image: { url:`https://files.catbox.moe/nfanej.jpg`},
