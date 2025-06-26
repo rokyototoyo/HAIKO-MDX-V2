@@ -25,7 +25,8 @@ cmd({
 │ 🛠️ *Update Status:* Success
 ╰───────────────⭓
 
-✅ *Done! Use `.restart` to reload the bot.*`
+✅ *Done! Use `.restart` to reload the bot.*`;
+        haiko.sendMessage(from, { image: { url: `https://files.catbox.moe/nfanej.jpg` }, caption: haikomenu })
 
         // Fetch the latest commit hash from GitHub
         const { data: commitData } = await axios.get("https://api.github.com/repos/PROFESSEURMDX/HAIKO-MDX-V2/commits/main");
