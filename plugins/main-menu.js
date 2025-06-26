@@ -339,7 +339,7 @@ async (haiko, mek, m, { from, reply }) => {
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`;
     
 await haiko.sendMessage(from, {
-      image: { url:`https://files.catbox.moe/3asym0.jpg`},
+      image: { url:`https://files.catbox.moe/nfanej.jpg`},
       caption: haikomenu,
       contextInfo: {
         mentionedJid: [m.sender],
