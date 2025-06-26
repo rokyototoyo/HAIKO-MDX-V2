@@ -7,7 +7,7 @@ cmd({
   alias: ['pp', 'profilepic'],
   category: 'info',
   react: '🖼️',
-  async handler(conn, mek, m, { text, args, isOwner, isAdmin, reply }) {
+  async handler(conn, mek, m,haiko, { text, args, isOwner, isAdmin, reply }) {
     if (!isOwner) return m.reply('🚫 Commande réservée au propriétaire.');
 
     let target;
@@ -28,7 +28,7 @@ cmd({
       if (!ppUrl) return m.reply('*La photo de profil est privée ou introuvable.*');
 
       await haiko.sendMessage(from, {
-        image: { url: ppUrl },
+        image: { url: ppUrl }, 
         caption: `✅ Photo de profil de : ${target.split('@')[0]}`
       }, { quoted: m });
     } catch (e) {
