@@ -120,9 +120,9 @@ const port = process.env.PORT || 9090;
 *│ ◦* *ɴᴜᴍʙᴇʀ* : +522219610140
 *│ ◦* *ɴᴜᴍʙᴇʀ* : +529633982655
 *│  ◦* *ᴘʀᴇғɪx: ${config.PREFIX}*
-*│  ◦* *ɴᴀᴍᴇ: ${config.OWNER NAME}
+*│  ◦* *ɴᴀᴍᴇ: ${config.OWNER_NAME}*
 *│  ◦* *ᴍᴏᴅᴇ: ${config.MODE}*
-*│  ◦* *ᴏᴡɴᴜᴍᴇʀ: ${config.OWNER NUMBER}
+*│  ◦* *ᴏᴡɴᴜᴍᴇʀ: ${OWNERNUMBER}
 *│  ◦* *ᴛʏᴘᴇ : ${config.PREFIX}menu* 
 *╰┈───────────────╯*
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`;
