@@ -1,1 +1,0 @@
-## HAIKO MDX V2 
