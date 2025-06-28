@@ -22,7 +22,6 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃│❍ *ᴍᴏᴅᴇ* : *${config.MODE}*
 ┃│❍ *ᴘʀᴇғɪx* : *[${config.PREFIX}]*
 ┃│❍ *ᴅᴇᴠᴇʟᴏᴘᴇʀ* : *`xᴛʀᴇᴍᴇ`*
-┃│❍ *ᴘʟᴜɢɪɴs* :  *${totalCommands}*
 ┃│❍ *ᴠᴇʀsɪᴏɴ* : *`2.0.0`*
 ┃╰•─────────────⊷
 ╰∘━━━━━━━━━━━━━━━━∘╯
