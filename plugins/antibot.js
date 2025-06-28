@@ -9,28 +9,28 @@ cmd({
     react: "🛡️",
     desc: "*Aᴄᴛɪᴠᴇ/ᴅᴇ́sᴀᴄᴛɪᴠᴇ ʟ'ᴀɴᴛɪ-ʙᴏᴛ ᴅᴀɴs ᴜɴ ɢʀᴏᴜᴘᴇ*",
     category: "group",
-    use: "*.antibot on/off",
+    use: "*.ᴀɴᴛɪʙᴏᴛ ᴏɴ/ᴏғғ*",
     filename: __filename
 },
 async (conn, mek, m, { reply, args, isGroup, isAdmin, isBotAdmin }) => {
     try {
-        if (!isGroup) return reply("❌ Cette commande ne fonctionne qu'en groupe.");
-        if (!isAdmin) return reply("❌ Seuls les *admins* peuvent utiliser cette commande.");
-        if (!isBotAdmin) return reply("❌ Je dois être *admin* pour activer l'antibot.");
+        if (!isGroup) return reply("*❌ ᴄᴇᴛᴛᴇ ᴄᴏᴍᴍᴀɴᴅᴇ ɴᴇ ғᴏɴᴄᴛɪᴏɴɴᴇ ǫᴜ'ᴇɴ ɢʀᴏᴜᴘᴇ*");
+        if (!isAdmin) return reply("*❌ sᴇᴜʟs ʟᴇs `ᴀᴅᴍɪɴs` ᴘᴇᴜᴠᴇɴᴛ ᴜᴛɪʟɪsᴇʀ ᴄᴇᴛᴛᴇ ᴄᴏᴍᴍᴀɴᴅᴇ*");
+        if (!isBotAdmin) return reply("*❌ ᴊᴇ ᴅᴏɪs ᴇ̂ᴛʀᴇ `ᴅᴍɪɴ` ᴘᴏᴜʀ ᴀᴄᴛɪᴠᴇʀ ʟ'ᴀɴᴛɪʙᴏᴛ*");
 
         const action = args[0]?.toLowerCase();
         if (!["on", "off"].includes(action)) {
-            return reply("❓ Utilisation : *.antibot on* ou *.antibot off*");
+            return reply("*❓ ᴜᴛɪʟɪsᴀᴛɪᴏɴ : .ᴀɴᴛɪʙᴏᴛ ᴏɴ ᴏᴜ .ᴀɴᴛɪʙᴏᴛ ᴏғғ*");
         }
 
         const groupId = m.chat;
 
         if (action === "on") {
             antibotGroups.add(groupId);
-            reply("✅ *Antibot activé !* Les bots suspects seront automatiquement retirés.");
+            reply("*✅ ᴀɴᴛɪʙᴏᴛ ᴀᴄᴛɪᴠᴇ́ ! ʟᴇs ʙᴏᴛs sᴜsᴘᴇᴄᴛs sᴇʀᴏɴᴛ ᴀᴜᴛᴏᴍᴀᴛɪǫᴜᴇᴍᴇɴᴛ ʀᴇᴛɪʀᴇ́s*");
         } else {
             antibotGroups.delete(groupId);
-            reply("⚠️ *Antibot désactivé.* Les bots ne seront plus bloqués automatiquement.");
+            reply("⚠️ *ᴀɴᴛɪʙᴏᴛ ᴅᴇ́sᴀᴄᴛɪᴠᴇ́. ʟᴇs ʙᴏᴛs ɴᴇ sᴇʀᴏɴᴛ ᴘʟᴜs ʙʟᴏǫᴜᴇ́s ᴀᴜᴛᴏᴍᴀᴛɪǫᴜᴇᴍᴇɴᴛ*");
         }
 
     } catch (e) {
