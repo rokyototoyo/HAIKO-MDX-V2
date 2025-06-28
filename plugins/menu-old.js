@@ -8,53 +8,52 @@ cmd({
     pattern: "menu3",
     desc: "menu the bot",
     category: "menu2",
-    react: "🦞",
+    react: "📜",
     filename: __filename
 },
 async (conn, mek, m, { from, sender, pushname, reply }) => {
     try {
-        const dec = `╭━━━〔 *𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐* 〕━━━╮
-┃ ✨ *Owner:* ${config.OWNER_NAME}
-┃ ⚙️ *Mode:* ${config.MODE}
-┃ 📡 *Platform:* Heroku
-┃ 🧠 *Type:* NodeJs (Multi Device)
-┃ ⌨️ *Prefix:* ${config.PREFIX}
-┃ 🧾 *Version:* 2.0.0 Beta
-╰━━━━━━━━━━━━━━━━━━━━━━━━╯
+        const dec = `╭━━⧼ 𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐 ⧽━━╮
+┃ ✨ *ᴏᴡɴᴇʀ:* ${config.OWNER_NAME}
+┃ ⚙️ *ᴍᴏᴅᴇ:* ${config.MODE}
+┃ 📡 *ᴘʟᴀᴛғᴏʀᴍ:* *`ɢɪᴛʜᴜʙ`*
+┃ 🧠 *ᴛʏᴘᴇ:* NodeJs (Multi Device)
+┃ ⌨️ *ᴘʀᴇғɪx:* ${config.PREFIX}
+┃ 🧾 *ᴠᴇʀsɪᴏɴ:* *`2.0.0 ʙᴇᴛᴀ`*
+╰━━━━━━━━━━━━━━━━━╯
 
-╭━━〔 🧩 *Command Categories* 〕━━╮
-┃ Quranmenu
-┃ Prayertime
-┃ Aimenu
-┃ Anmiemenu
-┃ Reactions
-┃ Convertmenu
-┃ Funmenu
-┃ Dlmenu
-┃ Listcmd
-┃ Mainmenu
-┃ Groupmenu
-┃ Allmenu
-┃ Ownermenu
-┃ Othermenu
-┃ Logo
-┃ Repo
-╰━━━━━━━━━━━━━━━━━━━━━━━━━━━╯
-> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀɪᴋᴏ ᴍᴅx*
-`;
+╭━❍ *`ᴄᴏᴍᴍᴀɴᴅ ᴄᴀᴛᴇɢᴏʀɪᴇs`* ❍
+┃⦉ ǫᴜʀᴀɴᴍᴇɴᴜ
+┃⦉ ᴘʀᴀʏᴇʀᴛɪᴍᴇ
+┃⦉ ᴀɪᴍᴇɴᴜ
+┃⦉ ᴀɴᴍɪᴇᴍᴇɴᴜ
+┃⦉ ʀᴇᴀᴄᴛɪᴏɴs
+┃⦉ ᴄᴏɴᴠᴇʀᴛᴍᴇɴᴜ
+┃⦉ ғᴜɴᴍᴇɴᴜ
+┃⦉ ᴅʟᴍᴇɴᴜ
+┃⦉ ʟɪsᴛᴄᴍᴅ
+┃⦉ ᴍᴀɪɴᴍᴇɴᴜ
+┃⦉ ɢʀᴏᴜᴘᴍᴇɴᴜ
+┃⦉ ᴀʟʟᴍᴇɴᴜ
+┃⦉ ᴏᴡɴᴇʀᴍᴇɴᴜ
+┃⦉ ᴏᴛʜᴇʀᴍᴇɴᴜ
+┃⦉ ʟᴏɢᴏ
+┃⦉ ʀᴇᴘᴏ
+╰━━━━━━━━━━━━━━━━━━⊷
+> *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ xᴛʀᴇᴍᴇ*`;
 
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/yvp2of.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐏𝐑𝐎𝐅-𝐗𝐓𝐑𝐄𝐌𝐄',
                         serverMessageId: 143
                     }
                 }
@@ -64,7 +63,7 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
 
         // Send cool voice note with context
         await conn.sendMessage(from, {
-            audio: { url: 'https://files.catbox.moe/0rpce6.mp3' },
+            audio: { url: 'https://files.catbox.moe/gm2hfz.mp3' },
             mimetype: 'audio/mp4',
             ptt: true,
             contextInfo: {
@@ -72,8 +71,8 @@ async (conn, mek, m, { from, sender, pushname, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363372853772240@newsletter',
-                    newsletterName:'𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                    newsletterJid: '120363398101781980@newsletter',
+                    newsletterName:'𝐏𝐑𝐎𝐅-𝐗𝐓𝐑𝐄𝐌𝐄',
                     serverMessageId: 143
                 }
             }
@@ -90,7 +89,7 @@ cmd({
     alias: ["logomenu"],
     desc: "menu the bot",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -134,15 +133,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/rvopa2.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: "𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐",
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: "𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀",
                         serverMessageId: 143
                     }
                 }
@@ -160,7 +159,7 @@ cmd({
     pattern: "reactions",
     desc: "Shows the reaction commands",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, reply }) => {
@@ -200,15 +199,15 @@ async (conn, mek, m, { from, quoted, reply }) => {
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/n8o5y2.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 144
                     }
                 }
@@ -228,7 +227,7 @@ cmd({
     pattern: "dlmenu",
     desc: "menu the bot",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -283,15 +282,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 143
                     }
                 }
@@ -311,7 +310,7 @@ cmd({
     pattern: "groupmenu",
     desc: "menu the bot",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -361,15 +360,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 143
                     }
                 }
@@ -389,7 +388,7 @@ cmd({
     pattern: "funmenu",
     desc: "menu the bot",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -428,15 +427,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/rvopa2.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 143
                     }
                 }
@@ -456,7 +455,7 @@ cmd({
     pattern: "othermenu",
     desc: "menu the bot",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -499,15 +498,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 143
                     }
                 }
@@ -527,7 +526,7 @@ cmd({
     pattern: "mainmenu",
     desc: "menu the bot",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -551,15 +550,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/rvopa2.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 143
                     }
                 }
@@ -610,15 +609,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 143
                     }
                 }
@@ -638,7 +637,7 @@ cmd({
     pattern: "convertmenu",
     desc: "menu the bot",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -671,15 +670,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/rvopa2.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 143
                     }
                 }
@@ -700,7 +699,7 @@ cmd({
     pattern: "animemenu",
     desc: "menu the bot",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -740,15 +739,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/7y24v8.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 143
                     }
                 }
@@ -769,7 +768,7 @@ cmd({
     pattern: "aimenu",
     desc: "menu the bot",
     category: "menu",
-    react: "🦞",
+    react: "📑",
     filename: __filename
 }, 
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
@@ -799,15 +798,15 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         await conn.sendMessage(
             from,
             {
-                image: { url: `https://files.catbox.moe/sy6isf.jpg` },
+                image: { url: `https://files.catbox.moe/rvopa2.jpg` },
                 caption: dec,
                 contextInfo: {
                     mentionedJid: [m.sender],
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363372853772240@newsletter',
-                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐',
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: '𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐🪀',
                         serverMessageId: 143
                     }
                 }
@@ -820,4 +819,4 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         reply(`${e}`);
     }
 });
-  
+          
