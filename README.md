@@ -15,7 +15,7 @@ DONT FORGET TO FORK 🍴 & STAR 🌟 REPO😇
 <a href="https://github.com/mrfrank-ofc/followers"><img title="Followers" src="https://img.shields.io/github/followers/PROFESSEURMDX?color=blue&style=flat-square"></a>
 <a href="https://github.com/PROFESSEURMDX/HAIKO-MDX-V2/stargazers/"><img title="Stars" src="https://img.shields.io/github/stars/PROFESSEURMDX/HAIKO-MDX-V2?color=blue&style=flat-square"></a>
 <a href="https://github.com/PROFESSEURMDX/HAIKO-MDX-V2  /network/members"><img title="Forks" src="https://img.shields.io/github/forks/PROFESSEURMDX/HAIKO-MDX-V2?color=blue&style=flat-square"></a>
-<a href="https://github.com/PROFESSEURMDX/HAIKO-MDX-V2/"><img title="Size" src="https://img.shields.io/github/repo-size/HAIKO-MDX-V2/HAIKO-MDX-V2?style=flat-square&color=green"></a>
+<a href="https://github.com/PROFESSEURMDX/HAIKO-MDX-V2/"><img title="Size" src="https://img.shields.io/github/repo-size/PROFESSEURMDX/HAIKO-MDX-V2?style=flat-square&color=green"></a>
 <a href="https://github.com/PROFESSEURMDX/graphs/commit-activity"><img height="20" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg"></a>&nbsp;&nbsp;
 </p>
 
