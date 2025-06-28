@@ -41,23 +41,30 @@ async (conn, mek, m, { reply, args, isGroup, isAdmin, isBotAdmin }) => {
 
 // Middleware — à appeler depuis le gestionnaire principal de participants
 async function handleNewParticipants(conn, m) {
-    const groupId = m.id;
-    if (!antibotGroups.has(groupId)) return;
+    const groupId = m.chat;
+    console.log(`[antibot] Nouveaux participants dans le groupe ${groupId}:`, m.participants);
+
+    if (!antibotGroups.has(groupId)) {
+        console.log(`[antibot] Antibot désactivé pour le groupe ${groupId}`);
+        return;
+    }
 
     for (const participant of m.participants) {
         try {
             const name = await conn.getName(participant);
-            const isBotLike = /bot|api/i.test(name) || participant.startsWith("92") || participant.length < 12;
+            const jidUser = participant.split("@")[0];
+            const isBotLike = /bot|api/i.test(name) || jidUser.length < 10;
 
             if (isBotLike) {
                 await conn.groupParticipantsUpdate(groupId, [participant], "remove");
                 await conn.sendMessage(groupId, {
-                    text: `🚫 *@${participant.split("@")[0]}* a été expulsé automatiquement (détecté comme bot).`,
+                    text: `🚫 *@${jidUser}* a été expulsé automatiquement (détecté comme bot).`,
                     mentions: [participant]
                 });
+                console.log(`[antibot] Participant ${participant} supprimé du groupe ${groupId}`);
             }
         } catch (e) {
-            console.error(`Erreur antibot: ${e.message}`);
+            console.error(`[antibot] Erreur: ${e.message}`);
         }
     }
 }
