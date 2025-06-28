@@ -1,42 +1,21 @@
-const config = require('../config');
-const moment = require('moment-timezone');
+const config = require('../config')
 const { cmd, commands } = require('../command');
-const axios = require('axios');
-
-function toSmallCaps(str) {
-  const smallCaps = {
-    A: 'ᴀ', B: 'ʙ', C: 'ᴄ', D: 'ᴅ', E: 'ᴇ', F: 'ғ', G: 'ɢ', H: 'ʜ',
-    I: 'ɪ', J: 'ᴊ', K: 'ᴋ', L: 'ʟ', M: 'ᴍ', N: 'ɴ', O: 'ᴏ', P: 'ᴘ',
-    Q: 'ǫ', R: 'ʀ', S: 's', T: 'ᴛ', U: 'ᴜ', V: 'ᴠ', W: 'ᴡ', X: 'x',
-    Y: 'ʏ', Z: 'ᴢ'
-  };
-  return str.toUpperCase().split('').map(c => smallCaps[c] || c).join('');
-}
+const os = require("os")
+const {runtime} = require('../lib/functions')
+const axios = require('axios')
 
 cmd({
-  pattern: "menu",
-  alias: ["👑"],
-  use: '.menu',
-  desc: "Show all bot commands",
-  category: "menu",
-  react: "🪃",
-  audio: { mp3: 'https://files.catbox.moe/6ifekx.mp3' },
-  filename: __filename
-},
-async (haiko, mek, m, { from, reply }) => {
-  try {
-    const totalCommands = commands.length;
-    const date = moment().tz("America/Mexico").format("dddd, DD MMMM YYYY");
-
-    const uptime = () => {
-      let sec = process.uptime();
-      let h = Math.floor(sec / 3600);
-      let m = Math.floor((sec % 3600) / 60);
-      let s = Math.floor(sec % 60);
-      return `${h}h ${m}m ${s}s`;
-    };
-
-    let haikomenu = `╭∘━━➤ *𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐*
+    pattern: "menu",
+    alias: ["allmenu","fullmenu"],
+    use: '.menu2',
+    desc: "Show all bot commands",
+    category: "menu",
+    react: "🪃",
+    filename: __filename
+}, 
+async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
+    try {
+        let dec = `╭∘━━➤ *𝐇𝐀𝐈𝐊𝐎-𝐌𝐃𝐗-𝐕𝟐*
 ┃╭•─────────────⊷
 ┃│❍ *ᴜsᴇʀ* : *@${m.sender.split("@")[0]}*
 ┃│❍ *ᴛɪᴍᴇ* : *${uptime()}*
@@ -322,27 +301,35 @@ async (haiko, mek, m, { from, reply }) => {
 > *┣➢*  ʏᴛᴠ
 > *╰⭑━━➤*  *𝚆𝙰 𝙱𝙾𝚃 𝟸𝟶𝟸𝟻-𝟸𝟶𝟸𝟼*
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴅᴇᴠ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`;
-    //SEND AUDIO 
-    haiko.sendMessage(from, { audio: { url: `https://files.catbox.moe/6ifekx.mp3` }, caption: haikomenu })
-    
-await haiko.sendMessage(from, {
-      image: { url:`https://files.catbox.moe/eafhsi.jpg`},
-      caption: haikomenu,
-      contextInfo: {
-        mentionedJid: [m.sender],
-        forwardingScore: 999,
-        isForwarded: true,
-        forwardedNewsletterMessageInfo: {
-          newsletterJid: '120363398101781980@newsletter',
-          newsletterName: '𝐏𝐑𝐎𝐅-𝐗𝐓𝐑𝐄𝐌𝐄',
-          serverMessageId: 143
-        }
-      }
-    }, { quoted: mek });
 
-    
-  } catch (e) {
-    console.error(e);
-    reply(`❌ Error: ${e.message}`);
-  }
+        await conn.sendMessage(
+            from,
+            {
+                image: { url: `https://files.catbox.moe/yaj0eu.jpg` },
+                caption: dec,
+                contextInfo: {
+                    mentionedJid: [m.sender],
+                    forwardingScore: 999,
+                    isForwarded: true,
+                    forwardedNewsletterMessageInfo: {
+                        newsletterJid: '120363398101781980@newsletter',
+                        newsletterName: "𝐏𝐑𝐎𝐅-𝐗𝐓𝐑𝐄𝐌𝐄",
+                        serverMessageId: 143
+                    }
+                }
+            },
+            { quoted: mek }
+        );
+
+        // Send audio
+        await conn.sendMessage(from, {
+            audio: { url: 'https://files.catbox.moe/uzvvj1.mp3' },
+            mimetype: 'audio/mp4',
+            ptt: true
+        }, { quoted: mek });
+        
+    } catch (e) {
+        console.log(e);
+        reply(`❌ Error: ${e}`);
+    }
 });
