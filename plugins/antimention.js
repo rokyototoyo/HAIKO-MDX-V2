@@ -1,5 +1,5 @@
+// antimention.js
 const { cmd } = require('../command');
-const config = require('../config');
 
 const antiMentionGroups = new Set();
 
@@ -11,8 +11,7 @@ cmd({
     category: "group",
     use: "*.antimention on/off/status",
     filename: __filename
-},
-async (conn, mek, m, { reply, args, isGroup, isAdmin }) => {
+}, async (conn, mek, m, { reply, args, isGroup, isAdmin }) => {
     try {
         if (!isGroup) return reply("❌ Cette commande fonctionne uniquement dans les groupes.");
         if (!isAdmin) return reply("❌ Seuls les *admins* peuvent activer/désactiver.");
@@ -23,44 +22,42 @@ async (conn, mek, m, { reply, args, isGroup, isAdmin }) => {
         switch (mode) {
             case "on":
                 antiMentionGroups.add(groupId);
-                reply("✅ *Antimention activé.* Les messages taguant plusieurs membres seront supprimés.");
-                break;
-
+                return reply("✅ *Antimention activé.* Les messages taguant plusieurs membres seront supprimés.");
             case "off":
                 antiMentionGroups.delete(groupId);
-                reply("❌ *Antimention désactivé.* Les mentions sont à nouveau autorisées.");
-                break;
-
+                return reply("❌ *Antimention désactivé.* Les mentions sont à nouveau autorisées.");
             case "status":
-                reply(`📊 *Statut Antimention :* ${antiMentionGroups.has(groupId) ? "✅ Activé" : "❌ Désactivé"}`);
-                break;
-
+                return reply(`📊 *Statut Antimention :* ${antiMentionGroups.has(groupId) ? "✅ Activé" : "❌ Désactivé"}`);
             default:
-                reply("❓ Utilisation : *.antimention on/off/status*");
+                return reply("❓ Utilisation : *.antimention on/off/status*");
         }
     } catch (e) {
         console.error(e);
-        reply("❎ Erreur : " + e.message);
+        return reply("❎ Erreur : " + e.message);
     }
 });
 
-// Middleware de filtrage
 async function handleAntiMention(conn, m) {
-    if (!m.isGroup || !antiMentionGroups.has(m.chat)) return;
+    try {
+        if (!m.message) return;
+        if (!m.key.remoteJid.endsWith('@g.us')) return; // Asire se group
+        if (!antiMentionGroups.has(m.key.remoteJid)) return;
 
-    if (m.mentionedJid?.length > 3) {
-        try {
-            await conn.sendMessage(m.chat, {
-                delete: m.key
+        const messageContent = m.message;
+        // Tcheke si gen mention
+        const mentionedJids = m.message?.extendedTextMessage?.contextInfo?.mentionedJid || [];
+        if (mentionedJids.length > 3) {
+            // Efase mesaj la
+            await conn.sendMessage(m.key.remoteJid, { delete: m.key });
+            // Avètisman moun nan
+            const senderId = m.key.participant || m.key.remoteJid;
+            await conn.sendMessage(m.key.remoteJid, {
+                text: `🚫 *@${senderId.split("@")[0]}*, trop de mentions dans un seul message !`,
+                mentions: [senderId]
             });
-
-            await conn.sendMessage(m.chat, {
-                text: `🚫 *@${m.sender.split("@")[0]}*, trop de mentions dans un seul message !`,
-                mentions: [m.sender]
-            });
-        } catch (e) {
-            console.error(`Erreur suppression message mentionné : ${e.message}`);
         }
+    } catch (err) {
+        console.error("Erreur suppression message mentionné : ", err);
     }
 }
 
