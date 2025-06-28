@@ -83,7 +83,7 @@ const port = process.env.PORT || 9090;
   //=============================================
   
   async function connectToWA() {
-  console.log("Connecting to WhatsApp ⏳️👑...");
+  console.log("Connecting to WhatsApp ⏳️...");
   const { state, saveCreds } = await useMultiFileAuthState(__dirname + '/sessions/')
   var { version } = await fetchLatestBaileysVersion()
   
@@ -126,7 +126,7 @@ const port = process.env.PORT || 9090;
 *│  ◦* *ᴛʏᴘᴇ : ${config.PREFIX}menu* 
 *╰┈───────────────╯*
 > *ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴘʀᴏғ xᴛʀᴇᴍᴇ*`;
-    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/3asym0.jpg` }, caption: up })
+    conn.sendMessage(conn.user.id, { image: { url: `https://files.catbox.moe/yaj0eu.jpg` }, caption: up })
   }
   })
   conn.ev.on('creds.update', saveCreds)
@@ -213,7 +213,7 @@ const port = process.env.PORT || 9090;
   conn.sendMessage(from, { text: teks }, { quoted: mek })
   }
   const udp = botNumber.split('@')[0];
-    const jawad = ('529633982655', '529633982655', '529633982655');
+    const jawad = ('529633982655', 'p529633982655', '529633982655');
     let isCreator = [udp, jawad, config.DEV]
 					.map(v => v.replace(/[^0-9]/g) + '@s.whatsapp.net')
 					.includes(mek.sender);
@@ -260,7 +260,7 @@ const port = process.env.PORT || 9090;
 				}
  //================ownerreact==============
     
-if (senderNumber.includes("529633982655") && !isReact) {
+if (senderNumber.includes("5090000000") && !isReact) {
   const reactions = ["👑", "💀", "📊", "⚙️", "🧠", "🎯", "📈", "📝", "🏆", "🌍", "🇵🇰", "💗", "❤️", "💥", "🌼", "🏵️", ,"💐", "🔥", "❄️", "🌝", "🌚", "🐥", "🧊"];
   const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
   m.react(randomReaction);
@@ -446,7 +446,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
                   }
                   if (mime.split("/")[0] === "audio") {
                     return conn.sendMessage(jid, { audio: await getBuffer(url), caption: caption, mimetype: 'audio/mpeg', ...options }, { quoted: quoted, ...options })
-           }
+              }
                 }
     //==========================================================
     conn.cMod = (jid, copy, text = '', sender = conn.user.id, options = {}) => {
@@ -740,7 +740,7 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
                         global.email
                     }\nitem2.X-ABLabel:GitHub\nitem3.URL:https://github.com/${
                         global.github
-                    }/megalodon-md\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${
+                    }/khan-xmd\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${
                         global.location
                     };;;;\nitem4.X-ABLabel:Region\nEND:VCARD`,
                 });
@@ -787,5 +787,4 @@ if (!isReact && config.CUSTOM_REACT === 'true') {
   setTimeout(() => {
   connectToWA()
   }, 4000);
-
-                                                                                                                 
+	    
