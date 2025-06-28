@@ -1,5 +1,5 @@
 //---------------------------------------------------------------------------
-//           HAIKO-MDX-V2
+//           HAIKO-MDX-V2  
 //---------------------------------------------------------------------------
 //  ⚠️ DO NOT MODIFY THIS FILE ⚠️  
 //---------------------------------------------------------------------------
@@ -93,10 +93,10 @@ cmd({
 
     if (modeArg === "private") {
         config.MODE = "private";
-        return reply("✅ Bot mode is now set to *PRIVATE*.");
+        return reply("🏷️ Bot mode is now set to *PRIVATE*.");
     } else if (modeArg === "public") {
         config.MODE = "public";
-        return reply("✅ Bot mode is now set to *PUBLIC*.");
+        return reply("🏷️ Bot mode is now set to *PUBLIC*.");
     } else {
         return reply("❌ Invalid mode. Please use `.mode private` or `.mode public`.");
     }
@@ -514,3 +514,4 @@ cmd({
     reply(`Error: ${e.message}`);
   }
 });
+  
