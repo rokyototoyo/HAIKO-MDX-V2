@@ -17,7 +17,7 @@ async (conn, mek, m, { reply, args, isOwner }) => {
         if (!isOwner) return reply("❌ Seul le propriétaire peut gérer l’anticall.");
 
         const mode = args[0]?.toLowerCase();
-        const botNumber = conn.user.id;
+        const botNumber = conn.user.jid || conn.user.id;
 
         switch (mode) {
             case "on":
@@ -43,29 +43,27 @@ async (conn, mek, m, { reply, args, isOwner }) => {
     }
 });
 
+async function handleCall(conn, call) {
+    try {
+        const botId = conn.user.jid || conn.user.id;
+        if (!antiCallEnabled.has(botId)) return;
+
+        // call est un objet, pas un tableau
+        if (call.isGroup === false && call.status === "offer") {
+            const callerId = call.from;
+
+            await conn.rejectCall(callerId);
+            await conn.sendMessage(callerId, {
+                text: `🚫 *Appels interdits !*\nVous avez été automatiquement bloqué pour avoir essayé d'appeler le bot.`,
+            });
+            await conn.updateBlockStatus(callerId, true); // true pour bloquer
+        }
+    } catch (e) {
+        console.error("❌ Erreur anticall :", e.message);
+    }
+}
+
 module.exports = {
     antiCallEnabled,
-
-    // Middleware à appeler sur l'événement de type call
-    async handleCall(conn, callUpdate) {
-        try {
-            const botId = conn.user.id;
-            if (!antiCallEnabled.has(botId)) return;
-
-            for (const call of callUpdate) {
-                if (call.isGroup === false && call.status === "offer") {
-                    const callerId = call.from;
-                    await conn.rejectCall(call.id, call.from);
-                    await conn.sendMessage(callerId, {
-                        text: `🚫 *Appels interdits !*\nVous avez été automatiquement bloqué pour avoir essayé d'appeler le bot.`,
-                    });
-
-                    // Optionnel : bloquer l'utilisateur
-                    await conn.updateBlockStatus(callerId, "block");
-                }
-            }
-        } catch (e) {
-            console.error("❌ Erreur anticall :", e.message);
-        }
-    }
+    handleCall
 };
