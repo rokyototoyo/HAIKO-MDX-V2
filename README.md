@@ -21,7 +21,7 @@ DONT FORGET TO FORK 🍴 & STAR 🌟 REPO😇
 
 <p align="center">
   <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=80&pause=1000&color=00FF00&center=true&vCenter=true&width=1000&height=200&lines=HAIKO MDX V2;VERSION+2025;BY+PRINCE+XTREME" alt="Typing SVG" />
+    <img src="https://readme-typing-svg.demolab.com?font=Black+Ops+One&size=80&pause=1000&color=00FF00&center=true&vCenter=true&width=1000&height=200&lines=HAIKO-MDX-V2;VERSION+2025;BY+PRINCE+XTREME" alt="Typing SVG" />
   </a>
 </p>
   
@@ -40,7 +40,7 @@ DONT FORGET TO FORK 🍴 & STAR 🌟 REPO😇
 
 `FORK 🍴 AND STAR ⭐ IF YOU LIKE THIS BOT`
 
-  <a href="https://github.com/PROFESSEURMDX/HAIKO-MDX-V2/fork"><img title="HAIKO-MDX-V2" src="https://img.shields.io/badge/FORK-HAIKO-%20MDX-V2-BOTh?color=indigo&style=for-the-badge&logo=stackshare"></a>
+  <a href="https://github.com/PROFESSEURMDX/HAIKO-MDX-V2/fork"><img title="HAIKO-MDX-V2" src="https://img.shields.io/badge/FORK-HAIKO%20MDX%20V2-BOTh?color=indigo&style=for-the-badge&logo=stackshare"></a>
   
 ### 2. 𐃁GET SESSION ID𐃁 
 
